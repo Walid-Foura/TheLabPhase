@@ -1,0 +1,907 @@
+:root{
+    --font-primary:'Playfair Display', serif;
+    --font-secondary:'Nunito', sans-serif;
+    --color-one:rgb(255, 165, 0);
+    --color-two:rgb(255, 255, 255);
+    --color-three:rgb(254, 226, 179);
+    --color-four:rgba(245, 201, 126, 0.9);
+    --color-five:rgba(255, 255, 255, 0.5);
+    --color-six:rgb(245, 201, 126);
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x:  hidden;
+}
+html{
+    scroll-behavior: smooth;
+    font-size:100%;
+}
+/**********************************HEADER**********************************/
+header{
+    width: auto;
+    height: 100vh;
+    background-image: url('https://preview.colorlib.com/theme/meal2/images/hero_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0%;
+    background-attachment: fixed;
+}
+.fond{
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/**********************************NAVBAR**********************************/
+
+.fond nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% ;
+}
+.fond nav label{
+    color:var(--color-two);
+    font-family: var(--font-secondary);
+    font-size: 150%;
+    font-weight: 700;
+    cursor: pointer;
+}
+.navbar{
+    width: 50%;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.navbar ul li a{
+    color: rgba(255, 255, 255 , 0.5);
+    text-decoration: none;
+    font-family:var(--font-secondary);
+    font-size: 100%;
+    font-weight: 400;
+}
+.fond nav button{
+    border-style: none;
+    border-radius: 30px;
+    background-color:var(--color-one);
+    color: var(--color-two);
+    font-family: var(--font-secondary);
+    font-size: 100%;
+    font-weight: 700;
+    padding: 1.3%;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 0.02rem;
+}
+.fond nav button:active{
+    background-color: rgb(145, 141, 134);
+}
+.navbar a:hover{
+    color:var(--color-one);
+}
+.navbar a:active{
+    color:var(--color-one);
+}
+.navbar-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+}
+
+#hmbMenu img{
+    width: 7%;
+    position: absolute;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+#second-navbar{
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-secondary);
+    font-size: 120%;
+    background-color: rgba(245, 201, 126, 0.9);
+    visibility: hidden;
+}
+#second-navbar a{
+    text-decoration:none;
+    color: var(--color-two);
+}
+#second-navbar a:hover{
+    color: var(--color-one);
+}
+/**********************************CENTER**********************************/
+
+
+.centre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-two);
+    width: 40vw;
+}
+.centre h3{
+    font-family:var(--font-secondary);
+    font-size:70%;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.centre h1{
+    font-family: var(--font-primary);
+    font-size: 350%;
+    font-weight: 700;
+    text-align: center;
+}
+.centre p{
+    font-family: var(--font-secondary);
+    font-size: 100%;
+    font-weight: 400;
+    text-align:center;
+}
+.centre button{
+    border-style: none;
+    border-radius: 30px;
+    background-color: var(--color-one);
+    font-family: var(--font-secondary);
+    font-size: 100%;
+    font-weight: 700;
+    padding: 2.5%;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 00.02rem;
+}
+.centre button a{
+    text-decoration: none;
+    color: var(--color-two);
+}
+.centre button:active{
+    background-color: rgb(145, 141, 134);
+}
+.whatsapp img , .facebook img , .twitter img , .intagram img{
+    width: 2%;   
+    cursor: pointer;
+}
+
+/**********************************MENU**********************************/
+
+.menu{
+    height: 200vh;
+    background-color:var(--color-three);
+}
+/**********************************CONTAINER TOP**********************************/
+
+.container-top{
+    height: 50%;
+    padding: 5%;
+}
+.slider{
+    height: 150vh;
+    overflow: hidden;
+}
+.container-top-titles{
+    text-align: center;
+    width: 100%;
+    height: 20vh;
+}
+.container-top-titles h3{
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+} 
+.container-top-titles h1{
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 300%;
+    color: black;
+    margin:0;
+}
+
+.img-slider{
+    position: relative;
+    height: 120vh;
+  }
+  
+  .img-slider .slide{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+  }
+  
+  .img-slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
+  }
+  .img-slider .slide .info h2{
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  .breakfasts , .lunchs , .dinners , .drinks{
+      width: 100%;
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin: 5% 0;
+  }
+  .breakfast , .lunch , .dinner , .drink{
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-primary);
+      font-size: 120%;
+      font-weight: 700;
+      padding: 0.5%;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color:var(--color-one);
+      color:rgba(0, 0, 0, 0.5);
+      margin: 2%;
+  }
+  .breakfast button , .lunch button , .dinner button , .drink button{
+      border-radius: 50%;
+      background-color:rgba(0, 0, 0, 0.5);
+      color:var(--color-three);
+      border : none;
+      
+  }
+  
+  .img-slider .navigation{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .img-slider .navigation .btn{
+    background: rgba(0, 0, 0, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .img-slider .navigation .btn.active{
+    background:var(--color-one);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  }
+  
+/**********************************CONTAINER DOWN**********************************/
+
+  .container-down{
+      margin: 5%;
+      height: 45vh;
+  }
+  .container-down-titles{
+     text-align: center;
+     font-family: var(--font-secondary);
+     font-size: 50%;
+     font-weight: 900;
+     color: rgba(0, 0, 0, 0.5);
+  }
+  .container-down-titles h1:not(:first-of-type){
+      font-family: var(--font-primary);
+      font-size: 400%;
+      font-weight: 500;
+      color: black;
+  }
+ .desserts-image , .desserts{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 15%;
+ }
+ .desserts-image img{
+     width: 85%;
+ }
+ .dessert{
+     font-family: var(--font-primary);
+     font-size: 150%;
+     font-weight: 500;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     height: 18vh;
+ }
+ .dessert button{
+    border-radius: 50%;
+    background-color:rgba(0, 0, 0, 0.1);
+    border-style: none;
+    font-size: 70%;
+ }
+
+ /**********************************TESTIMONIALS GALERY**********************************/
+.testimonials-galery{
+    background-image:url(/img/hero_bg_2.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.fond2{
+  display: flex;
+  justify-content: space-between;
+  background-color:var(--color-four);
+  padding: 1% 5% 7% 5%;
+}
+/**********************************TESTIMONIALS**********************************/
+.left-titles , .right-titles{
+  font-family: var(--font-secondary);
+  font-size: 50%;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 5%;
+}
+.left-titles h1:not(:first-of-type) , .right-titles h1:not(:first-of-type){
+  font-family: var(--font-primary);
+  font-size: 320%;
+  font-weight: 500;
+  color: black;
+}
+.testimonials{
+  position: relative;
+  width: 45vw;
+  height: 75vh;
+  margin: 5%;
+ 
+}
+
+.testimonials .testimonial{
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.testimonials .testimonial.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+
+.testimonials .testimonial .info{
+  position: absolute;
+  top: 0;
+  
+}
+.testimonials .testimonial .info img{
+  width: 80px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+.testimonials .testimonial .info h2{
+  color: #fff;
+  font-size: 120%;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--color-one);  
+}
+.testimonials .testimonial .info h2:not(:first-of-type){
+    font-family: var(--font-primary);
+    font-size: 130%;
+    color: black;
+}
+.testimonials .testimonial .info p{
+  color: #fff;
+  font-family: var(--font-secondary);
+  font-size: 120%;
+  width: 60%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.testimonials .navigationT{
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  top: 100%;
+  left: 20%;
+  transform: translateX(-50%);
+}
+
+.testimonials .navigationT .btnT{
+  background-color: var(--color-five);
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.testimonials .navigationT .btnT.active{
+  background: var(--color-one);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/**********************************GALERY**********************************/
+.galerys{
+  position: relative;
+  width: 45vw;
+  height: 75vh;
+}
+
+.galerys .galery{
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.galerys .galery.active{
+  clip-path: circle(200% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+
+.galerys .galery img{
+    border-radius: 10%;
+    width: 100%;
+}
+
+.galerys .galery .info{
+  position: absolute;
+  top: 0;
+}
+
+.galerys .galery .info h2{
+  color: #fff;
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.galerys .navigationG{
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  top: 110%;
+  left: 45%;
+  transform: translateX(-50%);
+}
+.galerys .navigationG .btnG{
+  background:var(--color-five);
+  width: 12px;
+  height: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.galerys .navigationG .btnG.active{
+  background: var(--color-one);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/**********************************JOIN US**********************************/
+.joinus{
+    background-color:rgb(145, 141, 134);
+    display: flex;
+    justify-content: space-between;
+    padding:  5%;
+    
+}
+.joinus-titles{
+   width: 30vw;
+}
+.joinus-titles h1{
+    font-family: var(--font-primary);
+    font-size: 350%;
+    font-weight: 900;
+    color:var(--color-six);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.joinus-titles p{
+    font-family: var(--font-secondary);
+    font-size: 200%;
+    font-weight: 500;
+    text-align: justify;
+    color: var(--color-six);
+}
+
+.joinus-form{
+    width: 40vw;
+    height: 50vh;
+    font-family: var(--font-primary);
+    font-size: 120%;
+    font-weight: 600;
+    color: var(--color-six);
+    margin-top: 0%;
+}
+.joinus-form .form-item{
+    border-left-style: solid;
+    border-left-width: 1px;
+    margin: 4% 2% ;
+    padding: 1% 2% ;
+}
+.joinus-form .form-item input{
+    border-style: none;
+    outline: none;
+    background:none;
+    color:rgba(0, 0, 0, 0.8);
+}
+.joinus-form .form-item ::placeholder{
+    color:rgba(0, 0, 0, 0.5);
+}
+.joinus-form button{
+  border-style: none;
+  border-radius: 30px;
+  background-color:var(--color-six);
+  color:rgb(145, 141, 134);
+  font-family: var(--font-secondary);
+  font-size: 100%;
+  font-weight: 700;
+  padding: 13px;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 0.02rem;
+  margin-left: 70%;
+}
+.joinus-form button:active{
+    background-color: var(--color-one);
+}
+.joinus-form p{
+    margin-left: 20%;
+    color:var(--color-one);
+}
+#form-error{
+    visibility: hidden;
+}
+
+/**********************************MODAL**********************************/
+#modal{
+    background-color:var(--color-four);
+    position: absolute;
+    top: 0%;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
+.modal-container{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 55vh;
+    background-color: rgb(145, 141, 134);
+}
+.modal-container h1{
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 250%;
+    font-weight: 900;
+    letter-spacing:3px;
+    color: var(--color-six);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.modal-information{
+    display: flex;
+    flex-direction: column;
+    margin: 10% 15%;
+    font-family: var(--font-secondary);
+    font-size: 180%;
+    color: var(--color-six);
+}
+.modal-btn{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 18%;
+}
+.modal-btn button{
+    border-style: none;
+    border-radius: 30px;
+    background-color:var(--color-six);
+    color:rgb(145, 141, 134);
+    font-family: var(--font-secondary);
+    font-size: 100%;
+    font-weight: 700;
+    padding: 13px;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 0.02rem;
+}
+
+  /**********************************RESPONSIVE**********************************/
+@media only screen and (min-width: 1440px){
+  .centre h3 , .centre h1 ,.centre button , .navbar ul li a ,.fond nav button ,.container-top-titles h3{
+    font-size: 150%;
+  }
+  .navbar{
+    width: 80%;
+  }
+  .centre h1,.joinus-titles h1{
+    font-size: 500%;
+  }
+  .centre p, .joinus-form{
+    font-size: 150%;
+  }
+  .container-top-titles h1{
+    font-size: 400%;
+  }
+  .breakfast, .lunch, .dinner, .drink ,.dessert{
+    font-size: 250%;
+  }
+  .img-slider .navigation .btn ,.galerys .navigationG .btnG ,.testimonials .navigationT .btnT{
+    width: 18px;
+    height: 18px;  
+  }
+  .breakfast button, .lunch button, .dinner button, .drink button{
+    font-size: 70%;
+  }
+  .container-down{
+    margin: 3% 5%;
+  }
+  .container-down-titles{
+    font-size: 90%;
+  }
+  .container-down-titles h1{
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .container-down-menu{
+    margin: 10% 0;
+  }
+  .desserts-image img {
+    width: 150%;
+  }
+  .desserts-image, .desserts{
+    width: 100%;
+    margin-left: 0;
+  }
+  .left-titles, .right-titles{
+    font-size: 100%;
+  }
+  .testimonials .testimonial .info img{
+    width: 100px;
+  }
+  .testimonials .testimonial .info h2,.joinus-titles p{
+    font-size: 200%;
+  }
+  .testimonials .testimonial .info p{
+    font-size: 150%;
+  }
+  .testimonials .testimonial .info h2:not(:first-of-type){
+    font-size: 250%;
+  }
+  .galerys .galery img {
+    width: 120%;
+  }
+  .testimonials .navigationT{
+    top: 110%;
+  }
+  .joinus-form .form-item input{
+    font-size: 100%;
+  }
+} 
+
+
+@media only screen and (max-width: 768px){
+  .navbar{
+    visibility: hidden;
+  }
+  #hmbMenu img{
+    visibility: visible;
+  }
+  .navbar-menu{
+    height: 10vh;
+  }
+  .centre h3 ,.container-top-titles h3{
+    font-size: 70%;
+  }
+  .centre h1,.container-top-titles h1{
+    font-size: 250%;
+  }
+  .centre p,.joinus-titles p,.joinus-form{
+    font-size: 80%;
+  }
+  .img-slider {
+    height: 100vh;
+  }
+  .img-slider .slide .info h2{
+    font-size: 120%;
+  }
+  .img-slider .navigation{
+    bottom: 25%;
+  }
+  .container-down{
+    margin: 0 5%; 
+  }
+  .desserts-image, .desserts{
+    margin: 5% 0 ;
+  }
+  .desserts-image, .desserts{
+    width: 100%;
+    margin-left: 0;
+  }
+  .testimonials .testimonial .info h2{
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .testimonials .testimonial .info p{
+    font-size: 80%;
+  }
+  .testimonials .testimonial .info img{
+    margin-bottom: 0;
+  }
+  .galerys .navigationG{
+    top: 100%;
+  }
+  .joinus-titles h1{
+    font-size: 250%;
+  } 
+  .joinus{
+    padding: 5% 5% 0 5%;
+  }
+  
+}
+
+@media only screen and (max-width: 425px){
+  .centre{
+    width: 50vw;
+  }
+  .centre h3{
+    font-size: 50%;
+  }
+  .whatsapp img , .facebook img , .twitter img , .intagram img{
+    width: 4%;   
+  }
+  .FoodDescription{
+    display: none;
+  }
+  .img-slider{
+    height: 80vh;
+  }
+  .container-top{
+    padding: 5% 5% 0 5%;
+  }
+  .container-down-menu{
+    display: flex;
+    height: 20vh;
+  }
+  .desserts-image{
+    display: flex;
+    flex-direction: column;
+  }
+  .desserts-image img{
+    width: 35%;
+  }
+  .desserts{
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+  }
+  .fond2{
+    flex-direction: column;
+  }
+  .left-titles, .right-titles{
+    text-align: center;
+  }
+  .testimonials{
+    width: 100%;
+    margin-left: 25%;
+  }
+  .testimonials .navigationT{
+    top: 90%;
+    left: 25%;
+  }
+  .galerys .galery .info{
+    width: 90vw;
+  }
+  .galerys {
+    width: 100%;
+  }
+  .galerys .navigationG{
+    top: 95%;
+    left: 50%;
+  }
+  .joinus{
+    flex-direction: column;
+    align-items: center;
+  }
+  .joinus-titles{
+    width: 70vw;
+  }
+  .joinus-titles h1{
+    text-align: center;
+  }
+  .joinus-titles p{
+    text-align: center;
+  }
+  form{
+    height: 35vh;
+  }
+  .joinus-form{
+    height: 55vh;
+  }
+  .joinus-form button{
+    margin-left: 80%;
+  }
+  #second-navbar{
+    font-size: 90%;
+  }
+  .modal-container{
+    width: 70vw;
+    height: 35vh;
+  }
+  .modal-container h1{
+    font-size: 150%;
+  }
+  .modal-information{
+    font-size: 100%;
+    margin:10% 10%;
+  }
+  .modal-btn button{
+    font-size: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 375px){
+  .centre h1{
+    font-size: 200%;
+  }
+  .centre h3{
+    font-size: 45%;
+  }
+  .modal-container{
+    height: 45%;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .centre{
+    width: 60vw;
+    margin: 30% 0;
+  }
+  .fond{
+    justify-content: flex-start;
+  }
+  .modal-information{
+    font-size: 90%;
+  }
+  .modal-container{
+    width: 85vw;
+    height: auto;
+  }
+  .modal-btn button{
+    font-size: 70%;
+    margin: 2%;
+  }
+  #second-navbar{
+    font-size: 85%;
+  }
+}
